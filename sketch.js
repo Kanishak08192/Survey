@@ -1,4 +1,5 @@
 var form;
+var database;
 
 function preload(){
   background_img = loadImage("back.jpg");

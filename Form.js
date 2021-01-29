@@ -20,23 +20,23 @@ class Form {
 
   display(){
     this.title.html("Survey");
-    this.title.position(displayWidth/2 - 150,100);
+    this.title.position(displayWidth/2 - 70,110);
 
     this.title1.html("Ques1- Goverment should do something to reduce pollution.");
-    this.title1.position(displayWidth/2 - 330,200);
+    this.title1.position(displayWidth/2 - 260,200);
 
     this.title2.html("Ques2- Goverment should do something about the increase ");
-    this.title2.position(displayWidth/2 - 330,330);
+    this.title2.position(displayWidth/2 - 260,330);
 
     this.title3.html("of drug use in India. ");
-    this.title3.position(displayWidth/2 - 270,360);
+    this.title3.position(displayWidth/2 - 260,360);
 
-    this.input.position(displayWidth/2 - 180 , displayHeight/2 - 200);
-    this.button.position(displayWidth/2 - 130 , displayHeight/2 + 120);
-    this.button1.position(displayWidth/2 - 270 , 250);
-    this.button2.position(displayWidth/2 - 270 , 280);
-    this.button3.position(displayWidth/2 - 270 , 410);
-    this.button4.position(displayWidth/2 - 270 , 440);
+    this.input.position(displayWidth/2 - 100 , displayHeight/2 - 200);
+    this.button.position(displayWidth/2 - 70 , displayHeight/2 + 160);
+    this.button1.position(displayWidth/2 - 260 , 250);
+    this.button2.position(displayWidth/2 - 260 , 280);
+    this.button3.position(displayWidth/2 - 260 , 410);
+    this.button4.position(displayWidth/2 - 260 , 440);
    
 
     this.button.mousePressed(()=>{
@@ -51,13 +51,20 @@ class Form {
       this.button4.hide();
       name = this.input.value();
       this.greeting.html("Thanks for Participating ")
-      this.greeting.position(displayWidth/2 -250 , displayHeight/2 - 120);
+      this.greeting.position(displayWidth/2 -170 , displayHeight/2 - 120);
 
       this.greeting1.html(name)
-      this.greeting1.position(displayWidth/2 - 130, displayHeight/2 - 70 );
+      this.greeting1.position(displayWidth/2 - 70, displayHeight/2 - 70 );
 
     });
 
+    this.button1.mousePressed(()=>{
+      var answer = database.ref('ans1');
+  answer.set({
+    'true':yes
+    })
+  })
    
   }
+
 }
